@@ -4,15 +4,70 @@
   :root {
     --color-background: #ffffff;
     --color-text: #000000;
+    --color-radial: radial-gradient(100% 50% at 50% 0%, rgba(0,163,255,0.13) 0, rgba(0,163,255,0) 50%, rgba(0,163,255,0) 100%);
   }
 
   .dark {
-    --color-background: #000000;
+    --color-background: #0a0a0a;
     --color-text: #ffffff;
+    --color-radial: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120,119,198,0.3), rgba(255,255,255,0));
   }
 
   body {
     background-color: var(--color-background);
     color: var(--color-text);
+    background-image: var(--color-radial, none);
   }
+}
+
+/* Animación de gradiente más fluida */
+@keyframes gradientMove {
+  0% { 
+    background-position: 0% 50%; 
+    filter: brightness(0.98) saturate(1.05) contrast(1.02);
+  }
+  25% { 
+    background-position: 100% 50%; 
+    filter: brightness(1.08) saturate(1.15) contrast(1.05);
+  }
+  50% { 
+    background-position: 200% 50%; 
+    filter: brightness(1.12) saturate(1.2) contrast(1.08);
+  }
+  75% { 
+    background-position: 100% 50%; 
+    filter: brightness(1.08) saturate(1.15) contrast(1.05);
+  }
+  100% { 
+    background-position: 0% 50%; 
+    filter: brightness(0.98) saturate(1.05) contrast(1.02);
+  }
+}
+
+/* Animación de brillo que pasa por encima */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-gradientMove {
+  animation: gradientMove 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-shine {
+  animation: shine 5s ease-in-out infinite;
+  animation-delay: 2s; /* Inicia después del gradiente */
 }
