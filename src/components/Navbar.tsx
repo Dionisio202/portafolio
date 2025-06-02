@@ -23,21 +23,22 @@ const Navbar = () => {
     >
       {/* Logo manual: </> */}
       {!isScrolled && (
-        <div className="flex items-center gap-2 mr-50">
+        <div className="flex items-center gap-2 mr-70">
           <span className="text-2xl font-mono font-bold">&lt;/&gt;</span>
         </div>
       )}
 
       {/* Navegación */}
       <nav className="flex items-center gap-6">
+       
         <a href="#projects" className="hover:text-blue-500 transition text-sm font-medium">
-          Experience
-        </a>
-        <a href="#about" className="hover:text-blue-500 transition text-sm font-medium">
           Projects
         </a>
-        <a href="#contact" className="hover:text-blue-500 transition text-sm font-medium">
+        <a href="#about" className="hover:text-blue-500 transition text-sm font-medium">
           About me
+        </a>
+        <a href="#certificates" className="hover:text-blue-500 transition text-sm font-medium">
+        Certificates
         </a>
         <a href="#contact" className="hover:text-blue-500 transition text-sm font-medium">
          Contact
@@ -47,14 +48,16 @@ const Navbar = () => {
           onClick={toggleTheme}
           className={`p-2 rounded-full transition ${
             theme === 'dark'
-              ? 'bg-gray-700 text-white hover:bg-gray-600'
-              : 'bg-gray-100 text-black hover:bg-gray-300'
+              ? ' bg-gray-100 text-black hover:bg-gray-300'
+              : 'bg-gray-700 text-white hover:bg-gray-600'
           }`}
         >
+         
           {theme === 'light' ? (
-            <FiMoon className="w-4 h-4" />
-          ) : (
             <FiSun className="w-4 h-4" />
+         
+          ) : (
+               <FiMoon className="w-4 h-4" />
           )}
         </button>
 

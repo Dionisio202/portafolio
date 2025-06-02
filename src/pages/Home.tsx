@@ -1,15 +1,15 @@
 import DefaultLayout from "../layouts/DefaultLayout";
 import Badge from "../components/Badge"; // Importa tu componente azul
 import avatar from "../assets/img/edison.jpg";
-
+import AboutMe from "../components/AboutMe";
 import { FiMail, FiLinkedin, FiGithub } from "react-icons/fi";
 import ProjectList from "../components/ProjectList";
-
+import   CertificatesCarousel from "../components/CertificatesCarousel";
 const Home = () => {
   return (
     <DefaultLayout>
-      <section className="px-8 py-20 max-w-3xl mx-auto text-left">
-        <div className="flex items-center gap-4 mb-6">
+      <section className="px-8 py-20 max-w-3xl mx-auto text-left" >
+        <div className="flex items-center gap-4 mb-6" id="contact">
           <img src={avatar} alt="Edison" className="w-16 h-16 rounded-full" />
           <Badge>Available for hire</Badge>
         </div>
@@ -48,6 +48,11 @@ const Home = () => {
         </div>
         {/* 💻 Sección de proyectos */}
         <ProjectList />
+
+        <AboutMe />
+
+        {/* Sección de certificados */}
+        <CertificatesCarousel />
       </section>
     </DefaultLayout>
   );

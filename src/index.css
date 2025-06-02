@@ -2,15 +2,15 @@
 
 @layer base {
   :root {
-    --color-background: #ffffff;
-    --color-text: #000000;
-    --color-radial: radial-gradient(100% 50% at 50% 0%, rgba(0,163,255,0.13) 0, rgba(0,163,255,0) 50%, rgba(0,163,255,0) 100%);
-  }
-
-  .dark {
     --color-background: #0a0a0a;
     --color-text: #ffffff;
     --color-radial: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120,119,198,0.3), rgba(255,255,255,0));
+  }
+
+  .dark {
+     --color-background: #ffffff;
+    --color-text: #000000;
+    --color-radial: radial-gradient(100% 50% at 50% 0%, rgba(0,163,255,0.13) 0, rgba(0,163,255,0) 50%, rgba(0,163,255,0) 100%);
   }
 
   body {
