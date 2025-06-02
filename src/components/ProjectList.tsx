@@ -15,8 +15,6 @@ const ProjectList = () => {
 <FaProjectDiagram className="w-5 h-5 " /> Projects
 </h2>
 
-
-
 <div className="flex justify-items-start mb-8" id="projects">
   <div className="bg-gray-800 rounded-lg p-1 shadow-lg">
     <div className="flex">
