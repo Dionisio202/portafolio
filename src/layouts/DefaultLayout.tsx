@@ -1,3 +1,4 @@
+// DefaultLayout.jsx
 import type { ReactNode } from 'react';
 import Navbar from '../components/Navbar';
 
@@ -8,13 +9,10 @@ type DefaultLayoutProps = {
 const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return (
     <div className="flex flex-col min-h-screen w-full">
-  <Navbar />
-  <main className="flex-grow w-full">{children}</main>
-  <footer className="bg-gray-100 text-center p-4 text-sm text-gray-500 w-full">
-    &copy; {new Date().getFullYear()} Edison - All rights reserved.
-  </footer>
-</div>
-
+      <Navbar />
+      {/* Añade padding-top para compensar el navbar fixed */}
+      <main className="flex-grow w-full pt-20">{children}</main>
+    </div>
   );
 };
 
