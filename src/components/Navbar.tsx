@@ -24,24 +24,23 @@ const Navbar = () => {
       {/* Logo manual: </> */}
       {!isScrolled && (
         <div className="flex items-center gap-2 mr-70">
-          <span className="text-2xl font-mono font-bold">&lt;/&gt;</span>
+          <span className="text-xl sm:text-lg font-mono font-bold">&lt;/&gt;</span>
         </div>
       )}
 
       {/* Navegación */}
-      <nav className="flex items-center gap-6">
-       
-        <a href="#projects" className="hover:text-blue-500 transition text-sm font-medium">
+      <nav className="flex items-center gap-6 sm:gap-4 text-sm sm:text-xs">
+        <a href="#projects" className="hover:text-blue-500 transition font-medium">
           Projects
         </a>
-        <a href="#about" className="hover:text-blue-500 transition text-sm font-medium">
+        <a href="#about" className="hover:text-blue-500 transition font-medium">
           About me
         </a>
-        <a href="#certificates" className="hover:text-blue-500 transition text-sm font-medium">
-        Certificates
+        <a href="#certificates" className="hover:text-blue-500 transition font-medium">
+          Certificates
         </a>
-        <a href="#contact" className="hover:text-blue-500 transition text-sm font-medium">
-         Contact
+        <a href="#contact" className="hover:text-blue-500 transition font-medium">
+          Contact
         </a>
 
         <button
@@ -52,12 +51,10 @@ const Navbar = () => {
               : 'bg-gray-700 text-white hover:bg-gray-600'
           }`}
         >
-         
           {theme === 'light' ? (
-            <FiSun className="w-4 h-4" />
-         
+            <FiSun className="w-4 h-4 sm:w-3 sm:h-3" />
           ) : (
-               <FiMoon className="w-4 h-4" />
+            <FiMoon className="w-4 h-4 sm:w-3 sm:h-3" />
           )}
         </button>
 
@@ -65,7 +62,7 @@ const Navbar = () => {
           <a
             href="/Edison-Ortiz-CV.pdf"
             download
-            className="ml-4 px-4 py-2 rounded bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition"
+            className="ml-4 px-3 py-1.5 sm:px-2 sm:py-1 rounded bg-gray-900 text-white text-sm sm:text-xs font-medium hover:bg-gray-800 transition"
           >
             Download CV
           </a>
